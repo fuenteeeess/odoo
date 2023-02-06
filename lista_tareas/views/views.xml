@@ -10,7 +10,37 @@
 					<field name="prioridad"/>
 					<field name="urgente"/>
 					<field name="realizada"/>
+					<field name="fecha"/>
 				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="lista_tareas.calendar">
+			<field name="name">lista_tareas calendar</field>
+			<field name="model">lista_tareas.lista_tareas</field>
+			<field name="arch" type="xml">
+				<calendar date_start="fecha" color="tarea">
+					<field name="tarea"/>
+				</calendar>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="lista_tareas.kanban">
+			<field name="name">lista_tareas kanban</field>
+			<field name="model">lista_tareas.lista_tareas</field>
+			<field name="arch" type="xml">
+				<kanban >
+					<field name="id" />
+					<field name="tarea" />
+					<!-- Plantilla QWeb para indicar como es la tarjeta Kanban-->
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_card oe_kanban_global_click">
+								<field name="tarea" />
+							</div>
+						</t>
+					</templates>
+				</kanban>
 			</field>
 		</record>
 
@@ -18,24 +48,8 @@
 		<record model="ir.actions.act_window" id="lista_tareas.action_window">
 			<field name="name">lista_tareas window</field>
 			<field name="res_model">lista_tareas.lista_tareas</field>
-			<field name="view_mode">tree,form</field>
+			<field name="view_mode">tree,form,calendar,kanban</field>
 		</record>
-
-
-		<!-- server action to the one above -->
-		<!--<record model="ir.actions.server" id="lista_tareas.action_server">
-			<field name="name">lista_tareas server</field>
-			<field name="model_id" ref="model_lista_tareas_lista_tareas"/>
-			<field name="state">code</field>
-			<field name="code">
-				action = {
-				"type": "ir.actions.act_window",
-				"view_mode": "tree,form",
-				"res_model": model._name,
-				}
-			</field>
-		</record>-->
-
 
 		<!-- Top menu item -->
 		<menuitem name="Lista de tareas" id="lista_tareas.menu_root"/>
