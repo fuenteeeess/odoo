@@ -6,6 +6,7 @@ from odoo.exceptions import ValidationError
 class Socio(models.Model):
     _name = 'biblioteca.socio'
     _description = "Socios de la biblioteca"
+    _rec_name = 'nombre'
 
     nombre = fields.Char("Nombre", required=True)
     apellidos = fields.Char("Apellidos")
