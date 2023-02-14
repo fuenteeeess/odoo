@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='hospital_medico_action' model='ir.actions.act_window'>
+        <field name="name">Médicos del hospital</field>
+        <field name="res_model">hospital.medico</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Mi hospital" id="hospital_base_menu" />
+    <menuitem name="Medicos" id="hospital_medicos_menu_item" parent="hospital_base_menu" action="hospital_medico_action"/>
+
+    <record id="hospital_medicos_view_form" model="ir.ui.view">
+        <field name="name">Formulario de medicos</field>
+		<field name="model">hospital.medico</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+					<field name="nombre"/>
+					<field name="apellidos"/>
+                    <field name="numeroColegiado"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_medicos_view_tree" model="ir.ui.view">
+        <field name="name">Lista de médicos</field>
+        <field name="model">hospital.medico</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+				<field name="apellidos"/>
+                <field name="numeroColegiado"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_medicos_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de médicos</field>
+		<field name="model">hospital.medico</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nombre"/>
+				<field name="apellidos"/>
+                <field name="numeroColegiado"/>
+            </search>
+        </field>
+    </record>
+</odoo>

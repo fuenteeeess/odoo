@@ -25,7 +25,7 @@ class Prestado(models.Model):
             if record.inicio > fields.Date.today():
                 raise ValidationError("La fecha de inicio no puede ser posterior al dia de hoy.")
             
-    @api.constrains('fin')
+    @api.constrains('fin', 'inicio')
     def _check_finish (self):
         for record in self:
             if record.fin < record.inicio:
