@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='action_modulos' model='ir.actions.act_window'>
+        <field name="name">Módulos</field>
+        <field name="res_model">ciclos.modulo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Módulos" id="menu_item_modulos" parent="menu_principal_ciclos" action="action_modulos"/>
+
+    <record id="view_form_modulos" model="ir.ui.view">
+        <field name="name">Formulario módulo</field>
+		<field name="model">ciclos.modulo</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nombre"/>
+                    <field name="profesor"/>
+                    <field name="alumnos"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_modulos" model="ir.ui.view">
+        <field name="name">Lista de módulos</field>
+        <field name="model">ciclos.modulo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+				<field name="profesor"/>
+				<field name="alumnos"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_modulos" model="ir.ui.view">
+        <field name="name">Búsqueda de módulos</field>
+		<field name="model">ciclos.modulo</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nombre"/>
+				<field name="profesor"/>
+				<field name="alumnos"/>
+            </search>
+        </field>
+    </record>
+</odoo>

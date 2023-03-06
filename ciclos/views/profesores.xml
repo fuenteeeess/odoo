@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='action_profesores' model='ir.actions.act_window'>
+        <field name="name">Profesores</field>
+        <field name="res_model">ciclos.profesor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="profesores" id="menu_item_profesores" parent="menu_principal_ciclos" action="action_profesores"/>
+
+    <record id="view_form_profesores" model="ir.ui.view">
+        <field name="name">Formulario profesor</field>
+		<field name="model">ciclos.profesor</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_profesores" model="ir.ui.view">
+        <field name="name">Lista de profesores</field>
+        <field name="model">ciclos.profesor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+				<field name="apellidos"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_profesores" model="ir.ui.view">
+        <field name="name">Búsqueda de profesores</field>
+		<field name="model">ciclos.profesor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nombre"/>
+				<field name="apellidos"/>
+            </search>
+        </field>
+    </record>
+</odoo>
