@@ -17,6 +17,7 @@
                     <field name="nombre"/>
                     <field name="profesor"/>
                     <field name="alumnos"/>
+                    <field name="ciclo"/>
                 </group>
             </form>
         </field>
@@ -30,6 +31,7 @@
                 <field name="nombre"/>
 				<field name="profesor"/>
 				<field name="alumnos"/>
+                <field name="ciclo"/>
             </tree>
         </field>
     </record>
@@ -42,6 +44,7 @@
                 <field name="nombre"/>
 				<field name="profesor"/>
 				<field name="alumnos"/>
+                <field name="ciclo"/>
             </search>
         </field>
     </record>

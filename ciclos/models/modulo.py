@@ -8,3 +8,4 @@ class Modulo(models.Model):
     nombre = fields.Char('Nombre', required=True)
     profesor = fields.Many2one('ciclos.profesor', string="Profesor que imparte")
     alumnos = fields.Many2many('ciclos.alumno',string='Alumnos matriculados')
+    ciclo = fields.Many2one('ciclos.cicloformativo', string='Ciclo')

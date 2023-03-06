@@ -7,3 +7,4 @@ class Alumno(models.Model):
 
     nombre = fields.Char('Nombre', required=True)
     apellidos = fields.Char('Apellido/s')
+    modulos = fields.Many2many('ciclos.modulo', 'Modulos')

@@ -6,4 +6,4 @@ class CicloFormativo(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(string='Nombre', required=True)
-    modulos = fields.Many2many('ciclos.modulo', string='Modulos que incluye')
+    modulos = fields.One2many('ciclos.modulo', 'ciclo', string='Modulos que incluye')

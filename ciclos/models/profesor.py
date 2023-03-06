@@ -7,3 +7,4 @@ class Profesor(models.Model):
 
     nombre = fields.Char('Nombre', required=True)
     apellidos = fields.Char('Apellido/s')
+    modulos = fields.One2many('ciclos.modulo', 'profesor', string='Modulos')

@@ -16,6 +16,7 @@
                 <group>
                     <field name="nombre"/>
                     <field name="apellidos"/>
+                    <field name="modulos"/>
                 </group>
             </form>
         </field>
@@ -28,6 +29,7 @@
             <tree>
                 <field name="nombre"/>
 				<field name="apellidos"/>
+                <field name="modulos"/>
             </tree>
         </field>
     </record>
@@ -39,6 +41,7 @@
             <search>
                 <field name="nombre"/>
 				<field name="apellidos"/>
+                <field name="modulos"/>
             </search>
         </field>
     </record>
