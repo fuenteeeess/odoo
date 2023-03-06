@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_ciclo,ciclos.cicloformativo_default,model_ciclos_cicloformativo,,1,0,0,0
-acl_modulo,ciclos.modulo_default,model_ciclos_modulo,,1,0,0,0
-acl_alumno,ciclos.alumno_default,model_ciclos_alumno,,1,0,0,0
-acl_profesor,ciclos.profesor_default,model_ciclos_profesor,,1,0,0,0
-acl_ciclo,ciclos.cicloformativo_default,model_ciclos_cicloformativo,grupo_director,1,1,1,1
-acl_modulo,ciclos.modulo_default,model_ciclos_modulo,grupo_director,1,1,1,1
-acl_alumno,ciclos.alumno_default,model_ciclos_alumno,grupo_director,1,1,1,1
-acl_profesor,ciclos.profesor_default,model_ciclos_profesor,grupo_director,1,1,1,1
+profesor_ciclo,ciclos.cicloformativo_default,model_ciclos_cicloformativo,grupo_profesor,1,0,0,0
+profesor_modulo,ciclos.modulo_default,model_ciclos_modulo,grupo_profesor,1,0,0,0
+profesor_alumno,ciclos.alumno_default,model_ciclos_alumno,grupo_profesor,1,0,0,0
+profesor_profesor,ciclos.profesor_default,model_ciclos_profesor,grupo_profesor,1,0,0,0
+director_ciclo,ciclos.cicloformativo_default,model_ciclos_cicloformativo,grupo_director,1,1,1,1
+director_modulo,ciclos.modulo_default,model_ciclos_modulo,grupo_director,1,1,1,1
+director_alumno,ciclos.alumno_default,model_ciclos_alumno,grupo_director,1,1,1,1
+director_profesor,ciclos.profesor_default,model_ciclos_profesor,grupo_director,1,1,1,1
